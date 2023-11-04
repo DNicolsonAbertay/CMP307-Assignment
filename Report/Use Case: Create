@@ -1,1 +1,49 @@
+Use Case: Creation of an asset within the database system
 
+Actors:
+User
+Database System
+
+Description: this use case describes the process of adding a new asset to the database system.
+An asset can be any piece of hardware that is used on the company network, and this use case
+allows the user to input all relevant data into the system.
+
+Preconditions:
+The user is logged into the system.
+The user has the nescessary permissions to add new assets.
+The system is running on a windows machine.
+
+Flow of Events:
+
+1. The user initiates the process to add an asset to the system.
+2. The user should specify whether they wish to add the in use asset to the system or would
+like to enter the data for another asset.
+3. The system presents a data submission form with entry fields for the following data:
+    -System Name (Automatically retrieved from the system unless specifised otherwise)
+    -Model (Automatically retrieved from the system unless specifised otherwise)
+    -Manufacturer (Automatically retrieved from the system unless specifised otherwise)
+    -Type (Automatically retrieved from the system unless specifised otherwise)
+    -IP Address (Automatically retrieved from the system unless specifised otherwise)
+    -Purchase Date (If available on a physical sticker)
+    -Additional Notes (If applicable)
+    -Employee (linked to an existing employee responsible for the asset)
+    -Department (The department the asset is stored; selected from a predefined list: finance
+    -HR, operations, sales, or IT)
+4. The user fills the required information for the form.
+5. The system validates the entered information, ensuring that mandatory fields are not empty
+and that the enetered data is in the correct format.
+6. If the validation is successful, the system generates a unique identifier for the asset.
+7. The system associates the asset with the relevant employee and department
+8. The system attempts to store the data within the online database.
+9. The system confrims the successful addition of the asset and provides the user with a
+confirmation message.
+10. The process terminates and the use case ends.
+
+Alternative Flows:
+
+5a. The data fails validation checks due to incorrect or missing data. The systems displays
+an error message and prompts the user to correct any mistakes. The use case returns to step 4.
+8a. The system is unable to upload the asset to the database due to connection or techincal
+issues. The system will display an error and prompt the user to try again or advise them to
+report the issue.
+- The user decides to cancel the operation, the use case ends, no asset is added to the database.    
