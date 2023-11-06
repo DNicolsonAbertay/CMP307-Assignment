@@ -47,7 +47,7 @@ namespace Project.Forms
                         adminPage.Show();
                         //this.Close();
                     }
-                    else if (reader[1].ToString() == "Employee")
+                    else if (reader[2].ToString() == "Employee")
                     {
                         EmployeePage employeePage = new EmployeePage();
                         employeePage.Show();
