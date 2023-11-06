@@ -17,6 +17,9 @@ namespace Project.Forms
             InitializeComponent();
         }
 
+        Asset asset = new Asset();
+        Employee employee = new Employee();
+
         private void EmployeePage_Load(object sender, EventArgs e)
         {
 
@@ -24,7 +27,8 @@ namespace Project.Forms
 
         private void Display_Click(object sender, EventArgs e)
         {
-
+            DataTable datatable = asset.DisplayAssets();
+            EmpAssets.DataSource = datatable;
         }
     }
 }

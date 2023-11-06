@@ -42,12 +42,12 @@ namespace Project.Forms
                 if (reader[0].ToString() == Username.Text & reader[1].ToString() == Password.Text)
                 {
                     if (reader[2].ToString() == "Admin")
-                    {
+                    {                       
                         AdminPage adminPage = new AdminPage();
                         adminPage.Show();
                         //this.Close();
                     }
-                    else if (reader[1].ToString() == "Employee")
+                    else if (reader[2].ToString() == "Employee")
                     {
                         EmployeePage employeePage = new EmployeePage();
                         employeePage.Show();
@@ -55,6 +55,7 @@ namespace Project.Forms
                     }
                 }
             }
+            conn.Close();
         }
     }
 }

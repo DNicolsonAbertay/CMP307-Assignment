@@ -33,14 +33,14 @@
             UpdateAsset = new Button();
             DeleteAsset = new Button();
             ViewAsset = new Button();
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
+            AdminAssets = new DataGridView();
+            EmployeesData = new DataGridView();
             ViewEmployees = new Button();
             DeleteEmployee = new Button();
             UpdateEmployee = new Button();
             AddEmployees = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AdminAssets).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EmployeesData).BeginInit();
             SuspendLayout();
             // 
             // Logout
@@ -60,6 +60,7 @@
             AddAsset.TabIndex = 1;
             AddAsset.Text = "Add Asset";
             AddAsset.UseVisualStyleBackColor = true;
+            AddAsset.Click += AddAsset_Click;
             // 
             // UpdateAsset
             // 
@@ -78,6 +79,7 @@
             DeleteAsset.TabIndex = 3;
             DeleteAsset.Text = "Delete Asset";
             DeleteAsset.UseVisualStyleBackColor = true;
+            DeleteAsset.Click += DeleteAsset_Click;
             // 
             // ViewAsset
             // 
@@ -87,24 +89,23 @@
             ViewAsset.TabIndex = 4;
             ViewAsset.Text = "View Assets";
             ViewAsset.UseVisualStyleBackColor = true;
+            ViewAsset.Click += ViewAsset_Click;
             // 
-            // dataGridView1
+            // AdminAssets
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(212, 44);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(576, 163);
-            dataGridView1.TabIndex = 5;
+            AdminAssets.Location = new Point(212, 44);
+            AdminAssets.Name = "AdminAssets";
+            AdminAssets.Size = new Size(576, 150);
+            AdminAssets.TabIndex = 11;
             // 
-            // dataGridView2
+            // EmployeesData
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(212, 213);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(576, 163);
-            dataGridView2.TabIndex = 10;
+            EmployeesData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            EmployeesData.Location = new Point(212, 213);
+            EmployeesData.Name = "EmployeesData";
+            EmployeesData.RowTemplate.Height = 25;
+            EmployeesData.Size = new Size(576, 163);
+            EmployeesData.TabIndex = 10;
             // 
             // ViewEmployees
             // 
@@ -114,6 +115,7 @@
             ViewEmployees.TabIndex = 9;
             ViewEmployees.Text = "View Employees";
             ViewEmployees.UseVisualStyleBackColor = true;
+            ViewEmployees.Click += ViewEmployees_Click;
             // 
             // DeleteEmployee
             // 
@@ -147,12 +149,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView2);
+            Controls.Add(EmployeesData);
             Controls.Add(ViewEmployees);
             Controls.Add(DeleteEmployee);
             Controls.Add(UpdateEmployee);
             Controls.Add(AddEmployees);
-            Controls.Add(dataGridView1);
+            Controls.Add(AdminAssets);
             Controls.Add(ViewAsset);
             Controls.Add(DeleteAsset);
             Controls.Add(UpdateAsset);
@@ -160,8 +162,8 @@
             Controls.Add(Logout);
             Name = "AdminPage";
             Text = "AdminPage";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AdminAssets).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EmployeesData).EndInit();
             ResumeLayout(false);
         }
 
@@ -172,8 +174,8 @@
         private Button UpdateAsset;
         private Button DeleteAsset;
         private Button ViewAsset;
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
+        private DataGridView AdminAssets;
+        private DataGridView EmployeesData;
         private Button ViewEmployees;
         private Button DeleteEmployee;
         private Button UpdateEmployee;

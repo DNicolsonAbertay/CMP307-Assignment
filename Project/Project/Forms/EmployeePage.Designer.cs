@@ -31,6 +31,8 @@
             Display = new Button();
             Logout = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            EmpAssets = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)EmpAssets).BeginInit();
             SuspendLayout();
             // 
             // Display
@@ -45,23 +47,34 @@
             // 
             // Logout
             // 
-            Logout.Location = new Point(675, 382);
+            Logout.Location = new Point(553, 49);
             Logout.Name = "Logout";
             Logout.Size = new Size(75, 23);
             Logout.TabIndex = 1;
             Logout.Text = "Logout";
             Logout.UseVisualStyleBackColor = true;
             // 
+            // EmpAssets
+            // 
+            EmpAssets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            EmpAssets.Location = new Point(97, 91);
+            EmpAssets.Name = "EmpAssets";
+            EmpAssets.RowTemplate.Height = 25;
+            EmpAssets.Size = new Size(572, 304);
+            EmpAssets.TabIndex = 2;
+            // 
             // EmployeePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(EmpAssets);
             Controls.Add(Logout);
             Controls.Add(Display);
             Name = "EmployeePage";
             Text = "EmployeePage";
             Load += EmployeePage_Load;
+            ((System.ComponentModel.ISupportInitialize)EmpAssets).EndInit();
             ResumeLayout(false);
         }
 
@@ -70,5 +83,6 @@
         private Button Display;
         private Button Logout;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private DataGridView EmpAssets;
     }
 }

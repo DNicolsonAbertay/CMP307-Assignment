@@ -24,3 +24,9 @@ C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\Project.pdb
 C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\Project.genruntimeconfig.cache
 C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\ref\Project.dll
 C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\Project.Forms.Homepage.resources
+C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\Project.Forms.AddAsset.resources
+C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\Project.Forms.AddEmployee.resources
+C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\Project.Forms.DeleteAsset.resources
+C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\Project.Forms.DeleteEmployee.resources
+C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\Project.Forms.UpdateAsset.resources
+C:\GitHub\CMP307-Assignment\Project\Project\obj\Debug\net6.0-windows\Project.Forms.UpdateEmployee.resources
