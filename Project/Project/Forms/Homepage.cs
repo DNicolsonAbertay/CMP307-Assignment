@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,23 +21,19 @@ namespace Project.Forms
 
         private void Login_Click(object sender, EventArgs e)
         {
-            string connString = "Data Source = tolmount.abertay.ac.uk; Initial Catalog =mssql2101522; User ID = mssql2101522; Password = 25jC7T3rdZ";
-
-            SqlConnection conn = new SqlConnection();
-
-            conn.ConnectionString = connString;
+            MySqlConnection conn = new MySqlConnection("server=lochnagar.abertay.ac.uk;username=sql2101522;password=4wkBAzZ2IX2I;database=sql2101522;");
             conn.Open();
 
             Console.WriteLine("State: {0}", conn.State);
             Console.WriteLine("Connection String: {0}", conn.ConnectionString);
 
 
-            string LoginQuery = "SELECT Username, Password, AccessLevel FROM ScottishGlen.Employee";
+            string LoginQuery = "SELECT Username, Password, AccessLevel FROM Employee";
 
-            SqlCommand command = new SqlCommand(LoginQuery);
+            MySqlCommand command = new MySqlCommand(LoginQuery);
             command.Connection = conn;
 
-            SqlDataReader reader = command.ExecuteReader();
+            MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 if (reader[0].ToString() == Username.Text & reader[1].ToString() == Password.Text)

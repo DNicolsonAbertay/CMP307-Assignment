@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace Project
 {
@@ -12,22 +12,17 @@ namespace Project
     {
         public DataTable ViewEmployee()
         {
-            string connString = "Data Source = tolmount.abertay.ac.uk; Initial Catalog =mssql2101522; User ID = mssql2101522; Password = 25jC7T3rdZ";
-
-            SqlConnection conn = new SqlConnection();
-
-            conn.ConnectionString = connString;
+            MySqlConnection conn = new MySqlConnection("server=lochnagar.abertay.ac.uk;username=sql2101522;password=4wkBAzZ2IX2I;database=sql2101522;");
             conn.Open();
 
             Console.WriteLine("State: {0}", conn.State);
             Console.WriteLine("Connection String: {0}", conn.ConnectionString);
 
-            string ViewQuery = "SELECT EmpID, Firstname, Lastname, Email, Department, AccessLevel FROM ScottishGlen.Employee";
+            string ViewQuery = "SELECT EmployeeID, Firstname, Lastname, Email, Department, AccessLevel FROM Employee";
 
-            SqlCommand command = new SqlCommand(ViewQuery);
-            command.Connection = conn;
+            MySqlCommand command = new MySqlCommand(ViewQuery, conn);
 
-            using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
             {
                 DataTable datatable = new DataTable();
                 adapter.Fill(datatable);

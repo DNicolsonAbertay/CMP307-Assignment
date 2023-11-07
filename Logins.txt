@@ -1,0 +1,3 @@
+Admin Login: Username: jSmith1  Password: Admin1
+
+Employee Login: Username: dBrown1  Password: Employee1

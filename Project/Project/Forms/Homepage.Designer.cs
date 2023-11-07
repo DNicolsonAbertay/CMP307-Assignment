@@ -85,7 +85,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(260, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(259, 136);
+            pictureBox1.Size = new Size(259, 128);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 

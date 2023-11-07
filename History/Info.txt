@@ -1,0 +1,3 @@
+When creating the program i accidently uploaded the project into the wrong repository,
+because of this i have lost the history i built up on commits.
+The image file in this folder is an image of the previous repositorys commit history
