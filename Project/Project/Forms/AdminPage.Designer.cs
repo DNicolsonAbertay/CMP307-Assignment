@@ -51,6 +51,7 @@
             Logout.TabIndex = 0;
             Logout.Text = "Logout";
             Logout.UseVisualStyleBackColor = true;
+            Logout.Click += Logout_Click;
             // 
             // AddAsset
             // 
@@ -148,6 +149,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Peru;
             ClientSize = new Size(800, 450);
             Controls.Add(EmployeesData);
             Controls.Add(ViewEmployees);

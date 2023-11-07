@@ -45,5 +45,10 @@ namespace Project.Forms
             DeleteAsset deleteAsset = new DeleteAsset();
             deleteAsset.Show();
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

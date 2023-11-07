@@ -30,5 +30,10 @@ namespace Project.Forms
             DataTable datatable = asset.DisplayAssets();
             EmpAssets.DataSource = datatable;
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

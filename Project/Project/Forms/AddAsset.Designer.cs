@@ -44,12 +44,11 @@
             Model = new TextBox();
             Type = new TextBox();
             IPAddress = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
             AddNotes = new TextBox();
             label9 = new Label();
             Employee = new TextBox();
             Department = new TextBox();
-            NoDate = new CheckBox();
+            PurchaseDate = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -100,11 +99,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(112, 337);
+            label6.Location = new Point(12, 337);
             label6.Name = "label6";
-            label6.Size = new Size(82, 15);
+            label6.Size = new Size(357, 15);
             label6.TabIndex = 5;
-            label6.Text = "Purchase Date";
+            label6.Text = "Purchase Date: Please enter in dd/mm/yyyy format, or Unavailable";
             // 
             // label7
             // 
@@ -118,11 +117,11 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(135, 527);
+            label8.Location = new Point(103, 527);
             label8.Name = "label8";
-            label8.Size = new Size(59, 15);
+            label8.Size = new Size(91, 15);
             label8.TabIndex = 7;
-            label8.Text = "Employee";
+            label8.Text = "Employee Email";
             // 
             // Close
             // 
@@ -151,6 +150,7 @@
             Submit.TabIndex = 10;
             Submit.Text = "Submit";
             Submit.UseVisualStyleBackColor = true;
+            Submit.Click += Submit_Click;
             // 
             // SysName
             // 
@@ -187,13 +187,6 @@
             IPAddress.Size = new Size(348, 23);
             IPAddress.TabIndex = 15;
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(263, 331);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 16;
-            // 
             // AddNotes
             // 
             AddNotes.Location = new Point(263, 384);
@@ -225,27 +218,24 @@
             Department.Size = new Size(348, 23);
             Department.TabIndex = 21;
             // 
-            // NoDate
+            // PurchaseDate
             // 
-            NoDate.AutoSize = true;
-            NoDate.Location = new Point(528, 333);
-            NoDate.Name = "NoDate";
-            NoDate.Size = new Size(87, 19);
-            NoDate.TabIndex = 22;
-            NoDate.Text = "Unavailable";
-            NoDate.UseVisualStyleBackColor = true;
+            PurchaseDate.Location = new Point(392, 334);
+            PurchaseDate.Name = "PurchaseDate";
+            PurchaseDate.Size = new Size(219, 23);
+            PurchaseDate.TabIndex = 22;
             // 
             // AddAsset
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Peru;
             ClientSize = new Size(800, 853);
-            Controls.Add(NoDate);
+            Controls.Add(PurchaseDate);
             Controls.Add(Department);
             Controls.Add(Employee);
             Controls.Add(label9);
             Controls.Add(AddNotes);
-            Controls.Add(dateTimePicker1);
             Controls.Add(IPAddress);
             Controls.Add(Type);
             Controls.Add(Model);
@@ -286,11 +276,10 @@
         private TextBox Model;
         private TextBox Type;
         private TextBox IPAddress;
-        private DateTimePicker dateTimePicker1;
         private TextBox AddNotes;
         private Label label9;
         private TextBox Employee;
         private TextBox Department;
-        private CheckBox NoDate;
+        private TextBox PurchaseDate;
     }
 }

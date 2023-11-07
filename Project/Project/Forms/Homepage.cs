@@ -42,7 +42,7 @@ namespace Project.Forms
                 if (reader[0].ToString() == Username.Text & reader[1].ToString() == Password.Text)
                 {
                     if (reader[2].ToString() == "Admin")
-                    {                       
+                    {
                         AdminPage adminPage = new AdminPage();
                         adminPage.Show();
                         //this.Close();
